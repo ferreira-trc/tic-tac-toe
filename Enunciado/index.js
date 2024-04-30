@@ -49,6 +49,19 @@ function checkWinner() {
   let roundWon = false;
 
   // Verificar se estão reunidas as condições para haver um vencedor
+  for (let combo of winConditions) {
+    const [a, b, c] = combo;
+    const cellA = options[a];
+    const cellB = options[b];
+    const cellC = options[c];
+    if (cellA == '' || cellB == '' || cellC == ''){
+        continue
+    }
+    if (cellA && cellA === cellB && cellA === cellC) {
+        roundWon = true;
+        break;
+    }
+  }
 
   if (roundWon) {
     statusText.textContent = `${currentPlayer} ganhou o jogo!`;
