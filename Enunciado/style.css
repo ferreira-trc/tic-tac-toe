@@ -1,0 +1,16 @@
+.cellContainer{
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+ 
+.cell{
+    width: calc(300px/3);
+    height: calc(300px/3);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
